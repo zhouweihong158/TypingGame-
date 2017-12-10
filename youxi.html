@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/youxi.css">
+	<script src="js/youxi.js"></script>
+</head>
+<body>
+<!-- ctrlH
+属性：用来描述   初始数据类型
+方法：里边包含函数
+
+打字游戏：
+属性：落下的个数 速度 字符 出现位置  得分 生命 扣分 奖励 
+方法：消除  产生字符   下一关 开始 重新开始
+开始：产生字符
+产生字符：产生一个字符
+产生一个字符：产生随机数，所对应的下标，创建div innerText，插入到页面中（appendChild）
+innerWidth 
+位置随机
+把这些元素保存到一个数组
+往下掉：定位   下雨
+把页面中的元素放到数组里边
+
+时间函数嵌套循环
+获取当前位置  offsettop+speed再给到top
+超文本标记语言
+层叠样式表  css
+键盘码不区分大小写
+一般函数
+不会的内容
+箭头函数  没有argument，不能当构造函数，箭头函数不是调用时决定的，而是定义时决定的，所以this要注意。
+高度大于500.移出，removeChild，再从数组里边删除
+数组里边添加删除类方法：shift（前边） push（插入） pop splice（从当前位置进行删除，也可以添加，（4个参数）删除位置，删除个数）
+删掉再加一个，调用getChar
+
+键盘事件
+fromcharcode
+charcodeat
+string.fromcharcode(e.keycode)
+tolowercase()
+时间函数当做属性
+数组等于空数组
+confirm  带有确定和取消按钮的提示框
+去重叠  水平方向
+当前left的值+
+some
+js操作样式是行内样式
+变成一个图    二维数组，前边是字母，后边是保存图片 -->
+<button>开始游戏</button>
+<div class="dijiguan">第<span>1</span>关</div>
+<div class="jifen">得分<span>0</span></div>
+<div class="shengmingzhi">生命值<span>20</span></div>	
+</body>
+<script>
+    let dijiguan=document.querySelector(".dijiguan");
+    let jifen=document.querySelector(".jifen");
+    let shengmingzhi=document.querySelector(".shengmingzhi");
+	let game=new Game();
+	let button=document.querySelector("button");
+	button.onclick=function(){
+		button.style.display="none";
+		jifen.style.display="block";
+		dijiguan.style.display="block";
+		shengmingzhi.style.display="block";
+		game.start();
+	}
+	
+
+
+</script>
+</html>
+
+           
